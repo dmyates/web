@@ -80,21 +80,21 @@ const ProjectSchema = new Schema({
     readOnly: {
       type: String,
       index: {
-        unique: true,
+        unique: false,
         partialFilterExpression: { 'tokens.readOnly': { $exists: true } }
       }
     },
     readAndWrite: {
       type: String,
       index: {
-        unique: true,
+        unique: false,
         partialFilterExpression: { 'tokens.readAndWrite': { $exists: true } }
       }
     },
     readAndWritePrefix: {
       type: String,
       index: {
-        unique: true,
+        unique: false,
         partialFilterExpression: {
           'tokens.readAndWritePrefix': { $exists: true }
         }
